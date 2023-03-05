@@ -84,3 +84,14 @@ table tr:last-child td {
     /* Klasse zum ausblenden hinzufügen */
     display: none;
 }
+
+.horizontal-line {
+    height: 10px;
+    background-color: rgba(0,0,0,0.5);
+    width: 300px;
+    position: absolute;
+}
+
+.make-vertical {
+    transform: rotate(90deg);
+}
