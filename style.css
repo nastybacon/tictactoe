@@ -1,0 +1,33 @@
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    width: 399px;
+}
+
+td {
+    width: 133px;
+    height: 133px;
+    border: 5px solid black;
+}
+
+table tr td:last-child {
+    /* ganz rechts die Border entfernen */
+    border-right: 0;
+}
+
+table tr:first-child td {
+    /* ganz oben die Border entfernen */
+    border-top: 0;
+}
+
+table tr td:first-child {
+    /* ganz links die Border entfernen */
+    border-left: 0;
+}
+
+table tr:last-child td {
+    /* ganz unten die Border entfernen */
+    border-bottom: 0;
+}
