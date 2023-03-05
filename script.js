@@ -1,9 +1,9 @@
 let fields = []; // Array definieren
-
+let gameOver = false; 
 let currentShape = 'cross'; // erste Variable als Kreuz definieren
 
 function fillShape(id) { // Funktion für abwechselnde Cross oder Circle 
-    if (!fields[id]) { // wird nur aufgerufen, wenn noch keine Form drin ist (! -> negiert - immer das Gegenteil))
+    if (!fields[id] && !gameOver) { // wenn das Feld gefüllt ist und wir nicht GAME OVER haben (! -> negiert - immer das Gegenteil))
         if (currentShape == 'cross') { // wenn aktuelle Kreuz ist, dann
             currentShape = 'circle'; // wechseln wir zum Kreis
             document.getElementById('player-2').classList.remove('player-inactive'); // Klasse mit Transparenz entfernen
@@ -74,5 +74,9 @@ function checkForWin() { // hat jemand gewonnen?
     }
     if (winner) { // wenn gewonnen, dann
         console.log('GEWONNEN:', winner); // Test | GEWONNEN anzeigen
+        gameOver = true; // beendet das Spiel, man kann nichts mehr anklicken
+        setTimeout(function() { // verzögert das Bild anzeigen
+            document.getElementById('game-over').classList.remove('d-none'); // entfernen der Klasse um das Game Over Bild anzuzeigen
+        }, 500); // um 0.5 Sekunde verzögern
     }
 }

@@ -92,9 +92,30 @@ table tr:last-child td {
     position: absolute;
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
+    z-index: 1;
 }
 
 .make-vertical {
     transform: rotate(90deg);
     transform: scaleX(0.0);
+}
+
+.game-over {
+    position: absolute;
+    left: 12%;
+    right: 0;
+    height: 100%;
+    z-index: 2;
+    animation: zoomIn 225ms ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
