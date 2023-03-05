@@ -4,6 +4,7 @@ body { /* Feld mittig platzieren */
     justify-content: center;
     align-items: center;
     flex-direction: column; 
+    margin: 0;
 }
 
 .player-panel {
@@ -102,11 +103,28 @@ table tr:last-child td {
 
 .game-over {
     position: absolute;
-    left: 12%;
+    left: 0%;
     right: 0;
     height: 100%;
-    z-index: 2;
+    width: 100%;
     animation: zoomIn 225ms ease-in-out;
+    z-index: 2;
+}
+
+.restart-btn {
+    border: 1px solid coral;
+    background-color: rgb(0, 0, 0);
+    z-index: 2;
+    color: coral;
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: rgb(20, 20, 20);;
 }
 
 @keyframes zoomIn {
