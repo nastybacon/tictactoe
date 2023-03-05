@@ -11,6 +11,13 @@ td {
     width: 133px;
     height: 133px;
     border: 5px solid black;
+    cursor: pointer;
+    /* der Cursos zum Pointer machen beim drüber gehen */
+}
+
+td:hover {
+    background-color: rgba(25, 221, 0, 0.1);
+    /* leich grünen Hover einbinden */
 }
 
 table tr td:last-child {
@@ -38,6 +45,11 @@ table tr:last-child td {
     position: absolute;
     width: 80px;
     height: 80px;
-    left: 26px; 
+    left: 26px;
     top: 26px;
+}
+
+.d-none {
+    /* Klasse zum ausblenden hinzufügen */
+    display: none;
 }
