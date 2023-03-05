@@ -7,6 +7,7 @@ tr {
 }
 
 td {
+    position: relative;
     width: 133px;
     height: 133px;
     border: 5px solid black;
@@ -30,4 +31,13 @@ table tr td:first-child {
 table tr:last-child td {
     /* ganz unten die Border entfernen */
     border-bottom: 0;
+}
+
+.shape {
+    /* Bilder übereinander platzieren */
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 26px; 
+    top: 26px;
 }
