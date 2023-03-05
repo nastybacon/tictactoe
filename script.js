@@ -5,8 +5,12 @@ let currentShape = 'cross'; // erste Variable als Kreuz definieren
 function fillShape(id) { // Funktion für abwechselnde Cross oder Circle 
     if (currentShape == 'cross') { // wenn aktuelle Kreuz ist, dann
         currentShape = 'circle'; // wechseln wir zum Kreis
+        document.getElementById('player-1').classList.remove('player-inactive'); // Klasse mit Transparenz entfernen
+        document.getElementById('player-2').classList.add('player-inactive'); // Klasse mit Transparenz hinzufügen
     } else { // wenn nicht, dann
         currentShape = 'cross'; // wechseln wir zum Kreuz
+        document.getElementById('player-1').classList.add('player-inactive'); // Klasse mit Transparenz hinzufügen
+        document.getElementById('player-2').classList.remove('player-inactive'); // Klasse mit Transparenz entfernen
     }
 
     fields[id] = currentShape; // an dieser Stelle entweder Circle oder Cross 
