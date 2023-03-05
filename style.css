@@ -90,8 +90,11 @@ table tr:last-child td {
     background-color: rgba(0,0,0,0.5);
     width: 300px;
     position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
 }
 
 .make-vertical {
     transform: rotate(90deg);
+    transform: scaleX(0.0);
 }
